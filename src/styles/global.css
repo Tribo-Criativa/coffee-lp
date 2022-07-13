@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply bg-salmon dark:bg-[#0F1115] bg-hero-pattern dark:bg-hero-pattern-transparent bg-contain bg-no-repeat bg-right;
+}

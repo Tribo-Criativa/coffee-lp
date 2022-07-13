@@ -1,0 +1,7 @@
+.container {
+    @apply flex font-script items-center gap-4 -rotate-[16deg];
+}
+
+.lable {
+    @apply text-secondary-900 dark:text-white w-1/2 text-center lg:text-left;
+}
