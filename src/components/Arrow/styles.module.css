@@ -1,0 +1,3 @@
+.container {
+  @apply text-secondary-900 dark:text-white rotate-[24deg];
+}
