@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 export function Seal() {
   return (
     <svg
@@ -6,7 +8,7 @@ export function Seal() {
       height="166"
       fill="none"
       viewBox="0 0 166 166"
-      className="animate-spin-slow text-[#00787D] dark:text-white/10"
+      className={styles.container}
     >
       <circle cx="82.609" cy="82.609" r="82.609" fill="currentColor"></circle>
       <circle

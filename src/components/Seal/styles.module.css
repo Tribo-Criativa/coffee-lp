@@ -1,0 +1,3 @@
+.container {
+  @apply animate-spin-slow text-[#00787D] dark:text-white/10;
+}
