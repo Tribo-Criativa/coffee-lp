@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 export function Logo() {
   return (
     <svg
@@ -6,7 +8,7 @@ export function Logo() {
       height="57"
       fill="none"
       viewBox="0 0 151 57"
-      className="text-[#001819] dark:text-white w-32"
+      className={styles.container}
     >
       <path
         fill="currentColor"

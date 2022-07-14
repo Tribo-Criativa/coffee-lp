@@ -1,0 +1,3 @@
+.container {
+  @apply text-[#001819] dark:text-white w-32;
+}
