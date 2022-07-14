@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 interface ButtonProps {
     label: string,
     to: string,
@@ -6,7 +8,7 @@ interface ButtonProps {
 
 export function Button({ label, to, title }: ButtonProps) {
     return (
-        <a className="p-4 px-10 bg-aqua text-white hover:bg-aqua-dark transition-opacity rounded-md" href={to} title={title}>
+        <a className={styles.container} href={to} title={title}>
             {label}
         </a>
     )
