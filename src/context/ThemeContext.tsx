@@ -17,7 +17,7 @@ interface ThemeContextProviderProps {
 export const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 export function ThemeContextProvider ({ children }: ThemeContextProviderProps) {
-  const [themeVariant, setThemeVariant] = useState<ThemeVariants>(ThemeVariants.LIGHT);
+  const [themeVariant, setThemeVariant] = useState<ThemeVariants>(ThemeVariants.DARK);
   const LOCAL_STORAGE_KEY = "theme";
 
   const setVariant = useCallback((value: ThemeVariants) => {
