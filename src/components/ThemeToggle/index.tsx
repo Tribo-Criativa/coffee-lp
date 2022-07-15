@@ -1,16 +1,17 @@
+import { useContext } from 'react';
+import { ThemeContext, ThemeVariants } from '../../context/ThemeContext';
+
 import styles from './styles.module.css';
 
-interface ThemeToggleProps {
-  onChange: any;
-};
+export function ThemeToggle() {
+  const { themeVariant, setThemeVariant } = useContext(ThemeContext);
 
-export function ThemeToggle({ onChange }: ThemeToggleProps) {
   return (
     <label className={styles.container}>
       <input
         className={styles.input}
         type="checkbox"
-        onChange={onChange}
+        onChange={() => setThemeVariant(themeVariant === ThemeVariants.DARK ? ThemeVariants.LIGHT : ThemeVariants.DARK)}
       />
       <span className={styles.slider} />
     </label>

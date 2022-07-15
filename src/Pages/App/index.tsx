@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Annotation } from "../../components/Annotation";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
@@ -7,8 +6,6 @@ import { ThemeToggle } from "../../components/ThemeToggle";
 import styles from './styles.module.css';
 
 function App() {
-  const [ darkMode, setDarkMode ] = useState(false);
-
   return (
     <main className={styles.container}>
       <Header />
@@ -35,7 +32,7 @@ function App() {
         />
         <Annotation />
 
-        <ThemeToggle onChange={(event: any) => setDarkMode(event.target.checked)} />
+        <ThemeToggle />
       </div>
     </main>
   )
