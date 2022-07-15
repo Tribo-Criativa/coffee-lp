@@ -1,31 +1,42 @@
-import { Annotation } from "../../components/Annotation"
-import { Button } from "../../components/Button"
-import { Header } from "../../components/Header"
+import { useState } from "react";
+import { Annotation } from "../../components/Annotation";
+import { Button } from "../../components/Button";
+import { Header } from "../../components/Header";
+import { ThemeToggle } from "../../components/ThemeToggle";
+
+import styles from './styles.module.css';
 
 function App() {
+  const [ darkMode, setDarkMode ] = useState(false);
+
   return (
-    <main className="h-screen w-full max-w-7xl mx-auto flex flex-col px-4">
+    <main className={styles.container}>
       <Header />
 
-      <div className="flex flex-col gap-6 items-center md:items-start w-1/3">
-        <span className="text-aqua font-medium text-sm flex gap-2 items-center">☕ PESQUISA QUANTITATIVA </span>
+      <div className={styles.textWrapper}>
+        <span className={styles.hat}>☕ PESQUISA QUANTITATIVA</span>
 
-        <h1 className="text-[#001819] dark:text-white text-4xl lg:text-6xl font-black font-sans leading-tight lg:leading-snug text-center lg:text-left">
-            <span className="underline decoration-8 decoration-orange transition-all duration-700 ease-in-out">Café</span> 
+        <h1 className={styles.heroLead}>
+            <span className="underline decoration-8 decoration-orange">Café</span> 
             {' '}
             nosso de cada dia
         </h1>
 
-        <span className="text-[#001819] dark:text-[#D0D0D0] font-normal text-base text-center lg:text-left leading-relaxed">
+        <span className={styles.heroParagraph}>
           Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
         </span>
       </div>
 
-      <div className="flex mt-6">
-        <Button label="Responder agora" title="Responder formulário agora!" to="https://forms.gle/PMxoUoS9dBVuT4ULA" />
+      <div className={styles.ctaContainer}>
+        <Button 
+          label="Responder agora" 
+          title="Responder formulário agora!" 
+          to="https://forms.gle/PMxoUoS9dBVuT4ULA" 
+        />
         <Annotation />
-      </div>
 
+        <ThemeToggle onChange={(event: any) => setDarkMode(event.target.checked)} />
+      </div>
     </main>
   )
 }

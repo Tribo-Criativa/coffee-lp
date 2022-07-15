@@ -1,0 +1,23 @@
+.container {
+  @apply h-screen w-full max-w-7xl mx-auto flex flex-col px-4 justify-between;
+}
+
+.textWrapper {
+  @apply flex flex-col gap-8 items-center md:items-start w-1/2;
+}
+
+.hat {
+  @apply text-aqua font-medium text-sm flex gap-2 items-center;
+}
+
+.heroLead {
+  @apply text-[#001819] dark:text-white text-4xl lg:w-4/5 lg:text-6xl font-black font-sans leading-tight lg:leading-snug text-center lg:text-left;
+}
+
+.heroParagraph {
+  @apply text-[#001819] dark:text-[#D0D0D0] font-normal text-base text-center lg:text-left leading-relaxed;
+}
+
+.ctaContainer {
+  @apply flex mt-6;
+}
